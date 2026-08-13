@@ -1,0 +1,28 @@
+name: Java CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  java:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: oracle
+          java-version: '21'
+          java-package: jdk
+
+      - name: Compile Java code
+        run: |
+          javac app/Actions.java
+
+      - name: Run Java code
+        run: |
+          java -cp app Actions
