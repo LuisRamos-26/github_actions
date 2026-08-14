@@ -1,4 +1,4 @@
-name: Java CI
+name: hola mundo desde java
 
 on:
   push:
