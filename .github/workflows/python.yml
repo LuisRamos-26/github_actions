@@ -3,7 +3,7 @@ name: aprendiendo github Actions
 run-name: ¡Estoy aprendiendo github Actions!
 on: [push]
 jobs:
-    hola-mundo:
+    python:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
